@@ -84,6 +84,7 @@ return packer.startup(function(use)
   use {"ray-x/lsp_signature.nvim",}
   use 'axelvc/template-string.nvim'
     use   "narutoxy/dim.lua"
+  use 'wakatime/vim-wakatime'
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -105,6 +106,10 @@ return packer.startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 	--colorizer
 	use("norcalli/nvim-colorizer.lua")
+  use { 'mrshmllow/document-color.nvim'}
+
+
+
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	--code runner
   --copilot  

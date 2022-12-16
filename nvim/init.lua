@@ -24,11 +24,13 @@ require("user.dap")
 require("user.lab")
 require("user.colorizer")
 require("user.surrond")
+require('user.document-color')
 require("user.renamer")
 require('user.hop')
 require("user.notify")
 require("user.nlsp")
 require("user.copilot")
+require('user.template-string')
 require('user.res')
 require('user.nvim-web-icons')
 
@@ -43,7 +45,8 @@ require('dim').setup({})
 
 vim.cmd([[ hi MatchParen ctermbg=NONE guibg=green ]])
 
- --- cuando presione tab en modo editar me lleve a la la columna de identacion 
+  
 
-vim.cmd([[ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>" ]])
+
+
 

@@ -91,5 +91,7 @@ vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()
 vim.api.nvim_set_keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
 
+-- <p> | </p>  => <p | ></p>  al ejecutar un atajo 
+keymap("i", "<C-p>", "<C-p><C-r>=expand('%:t:r')<CR>", opts)
 
 

@@ -80,6 +80,11 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
+   if client.server_capabilities.colorProvider then
+    -- Attach document colour support
+    require("document-color").buf_attach(bufnr)
+  end
+
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
