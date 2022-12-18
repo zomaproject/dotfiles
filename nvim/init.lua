@@ -43,7 +43,7 @@ autocmd BufReadPost *
 require('dim').setup({})
 
 
-vim.cmd([[ hi MatchParen ctermbg=NONE guibg=green ]])
+-- vim.cmd([[ hi MatchParen ctermbg=NONE guibg=green ]])
 
   
 

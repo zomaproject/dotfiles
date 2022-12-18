@@ -1,0 +1,36 @@
+{
+
+ "Import": {
+    "prefix": "imd",
+    "body": [
+      "import {${2}} from '${1}'"
+    ],
+    "description": "Import"
+  },
+  "Import default": {
+    "prefix": "im",
+    "body": [
+      "import ${2:*} from '${1}'"
+    ],
+    "description": "Import  mine"
+  },
+
+  "Arrow Component": {
+    "prefix": "arc",
+    "body": [
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = ($2) => {",
+      "  return (",
+      "    <>",
+      "      $3",
+      "    </>",
+      "  )",
+      "}",
+      "",
+      "export default  ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}};"
+    ],
+    "description": "Arrow Component"
+  }
+
+
+}
