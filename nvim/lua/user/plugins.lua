@@ -61,16 +61,16 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim" })
 
 	-- Colorschemes
-   use "lunarvim/onedarker.nvim"
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use "lunarvim/darkplus.nvim"
-  use "folke/tokyonight.nvim"
-  use 'tiagovla/tokyodark.nvim'
+	use("lunarvim/onedarker.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	use("lunarvim/darkplus.nvim")
+	use("folke/tokyonight.nvim")
+	use("tiagovla/tokyodark.nvim")
 	use("cpea2506/one_monokai.nvim")
-  use { 'Everblush/everblush.nvim', as = 'everblush' }
+	use({ "Everblush/everblush.nvim", as = "everblush" })
 
- --HTML 
- use  'windwp/nvim-ts-autotag'
+	--HTML
+	use("windwp/nvim-ts-autotag")
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -79,12 +79,12 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-nvim-lua" })
-  use   'David-Kunz/cmp-npm'
-  --utilities
-  use {"ray-x/lsp_signature.nvim",}
-  use 'axelvc/template-string.nvim'
-    use   "narutoxy/dim.lua"
-  use 'wakatime/vim-wakatime'
+	use("David-Kunz/cmp-npm")
+	--utilities
+	use({ "ray-x/lsp_signature.nvim" })
+	use("axelvc/template-string.nvim")
+	use("narutoxy/dim.lua")
+	use("wakatime/vim-wakatime")
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -106,38 +106,30 @@ return packer.startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 	--colorizer
 	use("norcalli/nvim-colorizer.lua")
-  use { 'mrshmllow/document-color.nvim'}
-
-
+	use({ "mrshmllow/document-color.nvim" })
 
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	--code runner
-  --copilot  
-  -- use 'github/copilot.vim'
-  use {
-    "zbirenbaum/copilot.lua",
-}
-  use {
-  "zbirenbaum/copilot-cmp",
-  after = { "copilot.lua" },
-  config = function ()
-    require("copilot_cmp").setup()
-  end
-}
- 
-  
-
+	--copilot
+	-- use 'github/copilot.vim'
+	use({
+		"zbirenbaum/copilot.lua",
+	})
+	use({
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	})
 
 	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 	use({ "0x100101/lab.nvim", run = "cd js && npm ci", requires = { "nvim-lua/plenary.nvim" } })
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
 
-  -- rest nvim 
-use 'rest-nvim/rest.nvim'
-
-
-
+	-- rest nvim
+	use("rest-nvim/rest.nvim")
 
 	-- Treesitter
 	use({
@@ -163,4 +155,3 @@ use 'rest-nvim/rest.nvim'
 		require("packer").sync()
 	end
 end)
-

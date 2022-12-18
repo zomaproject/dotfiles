@@ -9,6 +9,8 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").load({paths = {"~/.config/nvim/snippets/"}})
+require("luasnip.loaders.from_lua").lazy_load { paths ={'~/.config/nvim/snippets/'} }
+ vim.cmd [[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]]
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -131,3 +133,4 @@ cmp.setup({
 		ghost_text = true,
 	},
 })
+
