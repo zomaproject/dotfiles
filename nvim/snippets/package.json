@@ -12,6 +12,10 @@
       {
         "language": ["javascript", "javascriptreact"],
         "path": "./javascript.json"
+      }, 
+      {
+        "language": ["css"],
+        "path": "./css.json"
       }
     ]
   }

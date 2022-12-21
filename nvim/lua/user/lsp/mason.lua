@@ -10,6 +10,7 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+  "cssmodules_ls"
 }
 
 local settings = {
@@ -49,6 +50,11 @@ for _, server in pairs(servers) do
   if server == 'tailwindcss' then
     local tailwindcss_opts = require('user.lsp.settings.tailwindcss')
     opts  = vim.tbl_deep_extend('force', opts, tailwindcss_opts)
+  end
+
+  if server == 'emmet_ls' then
+    local emmet_ls_opts = require('user.lsp.settings.tailwindcss')
+    opts  = vim.tbl_deep_extend('force', opts, emmet_ls_opts)
   end
 
   if server == 'tsserver' then

@@ -70,8 +70,8 @@ keymap("n", "<leader>nb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
-keymap("i", "<C-_>", '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', opts)
-keymap("n", "<C-_>", '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', opts)
+keymap("i", "<C-/>", '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', opts)
+keymap("n", "<C-/>", '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', opts)
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)

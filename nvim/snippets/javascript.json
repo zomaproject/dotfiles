@@ -1,12 +1,18 @@
 {
   "Import": {
     "prefix": "imd",
-    "body": ["import {${2}} from '${1}'"],
+    "body": [
+      "import {${2}} from '${1}'"
+    ],
     "description": "Import"
   },
+
+
   "Import default": {
     "prefix": "im",
-    "body": ["import ${2:*} from '${1}'"],
+    "body": [
+      "import ${2:*} from '${1}'"
+    ],
     "description": "Import  mine"
   },
   "Arrow Component": {
@@ -25,10 +31,53 @@
     ],
     "description": "Arrow Component"
   },
-
   "useState": {
     "prefix": "ush",
-    "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);$0"],
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);$0"
+    ],
     "description": "React useState() hook"
+  },
+  "lorem": {
+    "prefix": "lorem",
+    "body": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    ]
+  },
+
+  "GetStaticProps": {
+    "prefix": "getst",
+    "body": [
+      "",
+      "export async function getStaticProps($1){",
+      "  $2",
+      "  return {",
+      "    props: { ",
+      "      $3",
+      "    }",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "GetStaticProps"
+  },
+
+  "Function React Component": {
+    "prefix": "rfc",
+    "body": [
+      "",
+      "export default function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}($2){",
+      "  $3",
+      "  return (",
+      "    <>",
+      "      $4",
+      "    </>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "GetStaticProps"
   }
+
 }
+

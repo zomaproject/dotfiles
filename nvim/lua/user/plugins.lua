@@ -61,13 +61,13 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim" })
 
 	-- Colorschemes
-	use("lunarvim/onedarker.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("lunarvim/darkplus.nvim")
 	use("folke/tokyonight.nvim")
 	use("tiagovla/tokyodark.nvim")
 	use("cpea2506/one_monokai.nvim")
-	use({ "Everblush/everblush.nvim", as = "everblush" })
+ use 'sainnhe/everforest'
+
 
 	--HTML
 	use("windwp/nvim-ts-autotag")
@@ -85,10 +85,11 @@ return packer.startup(function(use)
 	use("axelvc/template-string.nvim")
 	use("narutoxy/dim.lua")
 	use("wakatime/vim-wakatime")
+  -- using packer.nvim
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
-	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
+	---use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
 
 	-- LSP
 	-- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer

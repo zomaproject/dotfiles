@@ -9,8 +9,8 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").load({paths = {"~/.config/nvim/snippets/"}})
-require("luasnip.loaders.from_lua").lazy_load { paths ={'~/.config/nvim/snippets/'} }
- vim.cmd [[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]]
+--require("luasnip.loaders.from_lua").lazy_load { paths ={'~/.config/nvim/snippets/'} }
+-- vim.cmd [[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]]
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -119,11 +119,11 @@ cmp.setup({
     -- { name = 'npm', keyword_length = 4 },
 		{ name = "buffer" },
 		{ name = "path" },
-    { name = 'nvim_lsp_signature_help' }
+    -- { name = 'nvim_lsp_signature_help' }
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
-		select = false,
+		select = true,
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
