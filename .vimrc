@@ -1,8 +1,8 @@
 "" Source your .vimrc
 "source ~/.vimrc
-
+set ideajoin
 set scrolloff=10
-set relativenumber
+"set relativenumber
 set showmode
 set showcmd
 
@@ -60,7 +60,9 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 
 
 " Comment lines
-map <leader>c <action>(CommentByLineComment)
+map <C-/> <action>(CommentByLineComment)
+" comentar por bloque
+vmap <C-/> <Action>(CommentByBlockComment)
 
 " Jump around with easymotion
 " map <leader>j <Plug>(easymotion-s)
@@ -117,7 +119,7 @@ nmap <leader>gb <Action>(Forward)
 
 " Git windows
 map <leader>gp <Action>(CheckinProject)
-map <leader>gw <Action>(ActivateVersionControlToolWindow)
+map <leader>gw <Action>(ActivateVersionControlToolWindow)"
 map <leader>gb <Action>(Git.Branches)
 map <leader>lf <Action>(ReformatCode)
 "usar leader + rc para ejecutar el archivo actual Shift + Ctrl + F10"
@@ -127,13 +129,17 @@ map <leader>lh <Action>(GotoNextError)
 "leader ll -> prevError"
 map <leader>lk <Action>(GotoPreviousError)
 
+
 " mover un bloque con alt + flechas"
 
 vmap <A-Up> :m '<-2<CR>gv=gv
 vmap <A-Down> :m '>+1<CR>gv=gv
 "leader np new project"
+
+
+" --------------- Java -----------------"
 map <leader>np <Action>(NewProject)
-" constrir methos getter and setter"
+" construir metodos getter and setter"
 map <leader>gs <Action>(GenerateSetter)
 map <leader>gg <Action>(GenerateGetter)
 map <leader>ga <Action>(GenerateGetterAndSetter)
@@ -144,5 +150,7 @@ map <leader>ss <Action>(GeneratetoString)
 "show hide / input fields
 map <leader>sh <Action>(ShowIntentionActions)
 
+" show info error
 
+map <leader>li <Action>(ShowErrorDescription)
 "  Find more examples here: https://jb.gg/share-ideavimrc
