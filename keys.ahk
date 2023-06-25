@@ -1,4 +1,4 @@
 ﻿CapsLock::Esc ;
 RAlt::LAlt ;
-^j::Down ;
-^k::Up ;
+^n::Down ;
+^p::Up ;

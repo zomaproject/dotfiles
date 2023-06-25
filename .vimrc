@@ -29,12 +29,13 @@ set notimeout
 
 "" Key mappings
 "" ========================================================
-
+set ideajoin
 inoremap jk <Esc>
 
 " Tab navigation
-nnoremap <S-l> :tabnext<CR>
-nnoremap <S-h> :tabprev<CR>
+nmap <S-l> <Action>(NextTab)
+nmap <S-h> <Action>(PreviousTab)
+nmap <leader>rv :source ~/.ideavimrc
 
 " Pane navigation
 nnoremap <A-h> <C-w>h
