@@ -120,7 +120,7 @@ nmap <leader>gb <Action>(Forward)
 
 " Git windows
 map <leader>gp <Action>(CheckinProject)
-map <leader>gw <Action>(ActivateVersionControlToolWindow)"
+map <leader>gw <Action>(ActivateVersionControlToolWindow)
 map <leader>gb <Action>(Git.Branches)
 map <leader>lf <Action>(ReformatCode)
 "usar leader + rc para ejecutar el archivo actual Shift + Ctrl + F10"
