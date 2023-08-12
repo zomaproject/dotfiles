@@ -2,7 +2,8 @@
 "source ~/.vimrc
 set ideajoin
 set scrolloff=10
-"set relativenumber
+set relativenumber
+set number
 set showmode
 set showcmd
 
@@ -76,10 +77,10 @@ map <leader>zc :action CollapseAllRegions<CR>
 map <leader>zo :action ExpandAllRegions<CR>
 
 " Window splits
-map <leader>wv <Action>(SplitVertically)
-map <leader>ws <Action>(SplitHorizontally)
-map <leader>wu <Action>(Unsplit)
-map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+map <leader>sv <Action>(SplitVertically)
+map <leader>sh <Action>(SplitHorizontally)
+map <leader>ru <Action>(Unsplit)
+map <leader>me <Action>(MoveEditorToOppositeTabGroup)
 
 " Display options
 map <leader>dd <action>(ToggleDistractionFreeMode)
@@ -90,13 +91,14 @@ map <leader>df <action>(ToggleFullScreen)
 map <leader>am <action>(ShowIntentionActions)
 map <leader>as <action>(SearchEverywhere)
 
-" File navigation
+" File  navigation
 map <leader>nf <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
 map <leader>fc <action>(FindInPath)
 "map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
+map <leader>w <action>(SaveAll)
 
 " Close active tab
 map <S-q> <action>(CloseContent)
@@ -120,7 +122,7 @@ nmap <leader>gb <Action>(Forward)
 
 " Git windows
 map <leader>gp <Action>(CheckinProject)
-map <leader>gw <Action>(ActivateVersionControlToolWindow)"
+map <leader>gw <Action>(ActivateVersionControlToolWindow)
 map <leader>gb <Action>(Git.Branches)
 map <leader>lf <Action>(ReformatCode)
 "usar leader + rc para ejecutar el archivo actual Shift + Ctrl + F10"
