@@ -18,7 +18,7 @@ set clipboard+=unnamed
 
 let mapleader = " "
 
-set surround
+set suround
 set highlightedyank
 set sneak
 set nerdtree
@@ -36,13 +36,13 @@ inoremap jk <Esc>
 " Tab navigation
 nmap <S-l> <Action>(NextTab)
 nmap <S-h> <Action>(PreviousTab)
-nmap <leader>rv :source ~/.ideavimrc
+nmap <leader>rv <Action>(IdeaVim.ReloadVimRc.reload)
 
 " Pane navigation
-nnoremap <A-h> <C-w>h
-nnoremap <A-l> <C-w>l
-nnoremap <A-k> <C-w>k
-nnoremap <A-j> <C-w>j
+map <A-h> <C-w>h
+map <A-l> <C-w>l
+map <A-k> <C-w>k
+map <A-j> <C-w>j
 
 " Jump between methods
 nnoremap [[ <Action>(MethodUp)
@@ -54,10 +54,10 @@ vnoremap > >gv
 
 " Execute macro saved in 'q' register
 nnoremap qj @q
-
 " Popup navigation
-inoremap <C-j> <Action>(PopupMenu-selectNext)
-inoremap <C-k> <Action>(PopupMenu-selectPrev)
+
+imap <C-j> <Action>(PopupMenu-selectNext)
+imap <C-k> <Action>(PopupMenu-selectPrev)
 
 
 
@@ -69,8 +69,9 @@ vmap <C-/> <Action>(CommentByBlockComment)
 " Jump around with easymotion
 " map <leader>j <Plug>(easymotion-s)
 
-" Open NERDTree (use q to exit)
-map <leader>e :NERDTreeToggle<CR>
+" Open NERDTree (use q to exit)ctivateProjectToolWindow)kctivateProjectToolWindow) e
+map <leader>e <Action>(ActivateProjectToolWindow)
+map <C-h> <Action>(ActivateProjectToolWindow)
 
 " Folding
 map <leader>zc :action CollapseAllRegions<CR>
@@ -98,15 +99,14 @@ map <leader>fc <action>(FindInPath)
 "map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
-map <leader>w <action>(SaveAll)
-
+map <leader>w <Action>(SaveAll)
 " Close active tab
 map <S-q> <action>(CloseContent)
 
 " Refactoring
 map <leader>rn <Action>(RenameElement)
-map <leader>rm <Action>(ExtractMethod)
-map <leader>rv <Action>(IntroduceVariable)
+map <leader>rem <Action>(ExtractMethod)
+map <leader>rnv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
@@ -126,9 +126,8 @@ map <leader>gw <Action>(ActivateVersionControlToolWindow)
 map <leader>gb <Action>(Git.Branches)
 map <leader>lf <Action>(ReformatCode)
 "usar leader + rc para ejecutar el archivo actual Shift + Ctrl + F10"
-map <leader>rc <Action>(RunClass)
 "leader lh -> nextError"
-map <leader>lh <Action>(GotoNextError)
+map <leader>lj <Action>(GotoNextError)
 "leader ll -> prevError"
 map <leader>lk <Action>(GotoPreviousError)
 
@@ -142,18 +141,29 @@ vmap <A-Down> :m '>+1<CR>gv=gv
 
 " --------------- Java -----------------"
 map <leader>np <Action>(NewProject)
+
 " construir metodos getter and setter"
-map <leader>gs <Action>(GenerateSetter)
-map <leader>gg <Action>(GenerateGetter)
-map <leader>ga <Action>(GenerateGetterAndSetter)
-map <leader>gc <Action>(GenerateConstructor)
 map <leader>om <Action>(OverrideMethods)
-map <leader>ss <Action>(GeneratetoString)
-"mostrar problemas relacionados (related problems)
 "show hide / input fields
 map <leader>sh <Action>(ShowIntentionActions)
 
 " show info error
 
-map <leader>li <Action>(ShowErrorDescription)
+nmap <leader>li <Action>(ShowErrorDescription)
+
 "  Find more examples here: https://jb.gg/share-ideavimrc
+
+imap <C-a> <Action>(ShowIntentionActions)
+map <C-h> <Action>(ActivateProjectToolWindow)
+vmap n <Action>(SelectNextOccurrence)
+imap <C-h> <Action>(ActivateProjectToolWindow)
+
+"Rider
+map <leader>rp <Action>(RiderNewSolution)
+nmap <leader>rr <Action>(Run)
+nmap <leader>nt <Action>(RiderNuGetToggleToolWindowAction)
+map <leader>rw <Action>(RiderDebuggerApplyEncChagnes)
+map <leader>sef <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
+map <leader><Esc> <Action>(HideActiveWindow)
+"OPP
+map <leader>ge <Action>(Generate)
