@@ -5,6 +5,8 @@ return {
 	 default_prog = {"c:/Program Files/Git/bin/bash"},
 	-- window_background_opacity = 0.8,
    color_scheme = "Dark+",
+   window_close_confirmation="NeverPrompt",
+
 	font_size = 13,
   font = wezterm.font {
     family = 'JetBrains Mono',
