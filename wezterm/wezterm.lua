@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 return {
 	default_cursor_style = "BlinkingBar",
-	 default_prog = {"wsl","~"},
+	 default_prog = {"c:/Program Files/Git/bin/bash"},
 	-- window_background_opacity = 0.8,
    color_scheme = "Dark+",
 	font_size = 13,
@@ -13,8 +13,8 @@ return {
  },
   },
 	window_padding = {
-		left = 5,
-		right = 5,
+		left = 10,
+		right = 10,
 		top = 0,
 		bottom = 0,
 	},

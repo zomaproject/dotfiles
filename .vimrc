@@ -157,6 +157,8 @@ imap <C-a> <Action>(ShowIntentionActions)
 map <C-h> <Action>(ActivateProjectToolWindow)
 vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
+map <C-\> <Action>(ActivateTerminalToolWindow)
+map <leader>np <Action>(ManageRecentProjects)	
 
 "Rider
 map <leader>rp <Action>(RiderNewSolution)
