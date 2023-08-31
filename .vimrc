@@ -7,6 +7,7 @@ set number
 set showmode
 set showcmd
 
+set ignorecase
 set smartcase
 set incsearch
 set hlsearch
@@ -18,7 +19,7 @@ set clipboard+=unnamed
 
 let mapleader = " "
 
-set suround
+set surround
 set highlightedyank
 set sneak
 set nerdtree
@@ -56,8 +57,8 @@ vnoremap > >gv
 nnoremap qj @q
 " Popup navigation
 
-imap <C-j> <Action>(PopupMenu-selectNext)
-imap <C-k> <Action>(PopupMenu-selectPrev)
+imap <C-j> <Down>
+imap <C-k> <Up>
 
 
 
@@ -121,8 +122,10 @@ nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
 
 " Git windows
-map <leader>gp <Action>(CheckinProject)
+map <leader>ga <Action>(CheckinProject)
 map <leader>gw <Action>(ActivateVersionControlToolWindow)
+map <leader>gm <Action>(Git.Menu)
+map <leader>gA <Action>(Git.Stage.Add.All)
 map <leader>gb <Action>(Git.Branches)
 map <leader>lf <Action>(ReformatCode)
 "usar leader + rc para ejecutar el archivo actual Shift + Ctrl + F10"
@@ -157,13 +160,17 @@ imap <C-a> <Action>(ShowIntentionActions)
 map <C-h> <Action>(ActivateProjectToolWindow)
 vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
+map <C-\> <Action>(ActivateTerminalToolWindow)
+map <leader>np <Action>(ManageRecentProjects)
+map <leader><Esc> <Action>(HideActiveWindow)
 
 "Rider
-map <leader>rp <Action>(RiderNewSolution)
+map <leader>rS <Action>(RiderNewSolution)
 nmap <leader>rr <Action>(Run)
+map <leader>st <Action>(Stop)
 nmap <leader>nt <Action>(RiderNuGetToggleToolWindowAction)
 map <leader>rw <Action>(RiderDebuggerApplyEncChagnes)
 map <leader>sef <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
-map <leader><Esc> <Action>(HideActiveWindow)
+map <leader>gc <Action>(Generate)
 "OPP
 map <leader>ge <Action>(Generate)
