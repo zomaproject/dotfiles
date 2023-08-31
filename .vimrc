@@ -6,6 +6,8 @@ set relativenumber
 set number
 set showmode
 set showcmd
+set ai
+set si
 
 set ignorecase
 set smartcase
@@ -32,7 +34,7 @@ set notimeout
 "" Key mappings
 "" ========================================================
 set ideajoin
-inoremap jk <Esc>
+imap jk <Esc>
 
 " Tab navigation
 nmap <S-l> <Action>(NextTab)
@@ -107,7 +109,7 @@ map <S-q> <action>(CloseContent)
 " Refactoring
 map <leader>rn <Action>(RenameElement)
 map <leader>rem <Action>(ExtractMethod)
-map <leader>rnv <Action>(IntroduceVariable)
+map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
