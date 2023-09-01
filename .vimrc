@@ -173,6 +173,7 @@ map <leader>st <Action>(Stop)
 nmap <leader>nt <Action>(RiderNuGetToggleToolWindowAction)
 map <leader>rw <Action>(RiderDebuggerApplyEncChagnes)
 map <leader>sef <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
+map <leader>rt <Action>(RiderUnitTestRunSolutionAction)
 map <leader>gc <Action>(Generate)
 "OPP
 map <leader>ge <Action>(Generate)
