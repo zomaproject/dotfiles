@@ -112,6 +112,7 @@ map <leader>rem <Action>(ExtractMethod)
 map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
+map <leader>rm <Action>(Move)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Go to code
@@ -128,7 +129,10 @@ map <leader>ga <Action>(CheckinProject)
 map <leader>gw <Action>(ActivateVersionControlToolWindow)
 map <leader>gm <Action>(Git.Menu)
 map <leader>gA <Action>(Git.Stage.Add.All)
-map <leader>gb <Action>(Git.Branches)
+map <leader>gB <Action>(Git.Branches)
+map <leader>gb <Action>(Annotate)
+
+
 map <leader>lf <Action>(ReformatCode)
 "usar leader + rc para ejecutar el archivo actual Shift + Ctrl + F10"
 "leader lh -> nextError"
@@ -164,7 +168,7 @@ vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
 map <C-\> <Action>(ActivateTerminalToolWindow)
 map <leader>np <Action>(ManageRecentProjects)
-map <leader><Esc> <Action>(HideActiveWindow)
+map <leader>cc <Action>(HideActiveWindow)
 
 "Rider
 map <leader>rS <Action>(RiderNewSolution)
@@ -175,5 +179,7 @@ map <leader>rw <Action>(RiderDebuggerApplyEncChagnes)
 map <leader>sef <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
 map <leader>rt <Action>(RiderUnitTestRunSolutionAction)
 map <leader>gc <Action>(Generate)
+imap <C-i><Action>(ParameterInfo)
 "OPP
 map <leader>ge <Action>(Generate)
+nmap <leader>ff <Action>(FileStructurePopup)
