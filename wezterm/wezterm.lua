@@ -2,17 +2,17 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 return {
 	default_cursor_style = "BlinkingBar",
-	 default_prog = {"c:/Program Files/Git/bin/bash"},
+	 default_prog = {"C:/Program Files/Git/bin/bash"},
 	-- window_background_opacity = 0.8,
-   color_scheme = "Dark+",
+	color_scheme = 'Monokai (base16)',
    window_close_confirmation="NeverPrompt",
    initial_rows = 30,
    initial_cols = 110,
    
 
-	font_size = 13,
+	font_size = 12,
   font = wezterm.font {
-    family = 'Cascadia Code',
+    family = 'JetBrains Mono',
     harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1',  'zero=1', 'onum=1'
 -- 'ss01=1', 'ss02=1', 'ss03=1', 'ss04=1', 'ss05=1', 'ss06=1', 
  },
