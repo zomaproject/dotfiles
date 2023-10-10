@@ -4,7 +4,7 @@ return {
 	default_cursor_style = "BlinkingBar",
 	 default_prog = {"C:/Program Files/Git/bin/bash"},
 	-- window_background_opacity = 0.8,
-	color_scheme = 'Monokai (base16)',
+	color_scheme = 'Dark+',
    window_close_confirmation="NeverPrompt",
    initial_rows = 30,
    initial_cols = 110,
