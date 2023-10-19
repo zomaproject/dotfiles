@@ -2,6 +2,7 @@
 "source ~/.vimrc
 set ideajoin
 set scrolloff=10
+set matchit
 set relativenumber
 set number
 set showmode
@@ -179,6 +180,7 @@ map <leader>rw <Action>(RiderDebuggerApplyEncChagnes)
 map <leader>sef <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
 map <leader>rt <Action>(RiderUnitTestRunSolutionAction)
 map <leader>gc <Action>(Generate)
+map <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
 imap <C-i><Action>(ParameterInfo)
 "OPP
 map <leader>ge <Action>(Generate)
