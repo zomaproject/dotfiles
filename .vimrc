@@ -113,7 +113,7 @@ map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rm <Action>(Move)
-map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+map <leader>rp <Action>(Refactorings.QuickListPopupAction)
 
 " Go to code
 nmap <leader>gd <Action>(GotoDeclaration)
@@ -168,7 +168,7 @@ vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
 map <C-\> <Action>(ActivateTerminalToolWindow)
 map <leader>np <Action>(ManageRecentProjects)
-map <leader>cc <Action>(HideActiveWindow)
+map <Esc><Esc> <Action>(HideActiveWindow)
 
 "Rider
 map <leader>rS <Action>(RiderNewSolution)
@@ -180,6 +180,8 @@ map <leader>sef <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
 map <leader>rt <Action>(RiderUnitTestRunSolutionAction)
 map <leader>gc <Action>(Generate)
 imap <C-i><Action>(ParameterInfo)
+nmap <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
+
 "OPP
 map <leader>ge <Action>(Generate)
 nmap <leader>ff <Action>(FileStructurePopup)
