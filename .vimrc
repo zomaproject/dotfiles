@@ -69,6 +69,7 @@ imap <C-k> <Up>
 map <C-/> <action>(CommentByLineComment)
 " comentar por bloque
 vmap <C-/> <Action>(CommentByBlockComment)
+imap <C-/> <Action>(CommentByBlockComment)
 
 " Jump around with easymotion
 " map <leader>j <Plug>(easymotion-s)
@@ -169,7 +170,6 @@ vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
 map <C-\> <Action>(ActivateTerminalToolWindow)
 map <leader>np <Action>(ManageRecentProjects)
-map <Esc><Esc> <Action>(HideActiveWindow)
 
 "Rider
 map <leader>rS <Action>(RiderNewSolution)
@@ -177,7 +177,7 @@ nmap <leader>rr <Action>(Run)
 map <leader>st <Action>(Stop)
 nmap <leader>nt <Action>(RiderNuGetToggleToolWindowAction)
 map <leader>rw <Action>(RiderDebuggerApplyEncChagnes)
-map <leader>sef <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
+map <leader>dba <Action>(EfCore.Shared.OpenQuickEfCoreActionsAction)
 map <leader>rt <Action>(RiderUnitTestRunSolutionAction)
 map <leader>gc <Action>(Generate)
 map <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
