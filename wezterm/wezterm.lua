@@ -11,7 +11,7 @@ return {
  
 	font_size = 12,
   font = wezterm.font {
-    family = 'Monaspace Neon',
+    family = 'Cascadia Code',
     harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1',  'zero=1', 'onum=1',
 'ss01=1', 'ss02=1', 'ss03=1', 'ss04=1', 'ss05=1', 'ss06=1'
  },
