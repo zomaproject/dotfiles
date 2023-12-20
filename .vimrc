@@ -169,8 +169,7 @@ map <C-h> <Action>(ActivateProjectToolWindow)
 vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
 map <C-\> <Action>(ActivateTerminalToolWindow)
-map <leader>np <Action>(ManageRecentProjects)
-
+map <leader><S-c> <Action>(copilot.chat.show)
 "Rider
 map <leader>rS <Action>(RiderNewSolution)
 nmap <leader>rr <Action>(Run)
@@ -183,7 +182,7 @@ map <leader>gc <Action>(Generate)
 map <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
 imap <C-i><Action>(ParameterInfo)
 nmap <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
-
+nmap <leader>rP <Action>(ManageRecentProjects)
 "OPP
 map <leader>ge <Action>(Generate)
 nmap <leader>ff <Action>(FileStructurePopup)
