@@ -150,8 +150,10 @@ vmap <A-Down> :m '>+1<CR>gv=gv
 "leader np new project"
 
 
-" --------------- Java -----------------"
+" --------------- IDE -----------------"
 map <leader>np <Action>(NewProject)
+map <leader><S-c> <Action>(copilot.chat.show)
+map <leader>rV <Action>(IdeaVim.ReloadVimRc.reload)
 
 " construir metodos getter and setter"
 map <leader>om <Action>(OverrideMethods)
