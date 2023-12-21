@@ -2,20 +2,30 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 return {
 	default_cursor_style = "BlinkingBar",
-	 default_prog = {"C://Program Files/Git/bin/bash"},
+	default_prog = { "C:/Program Files/Git/bin/bash"},
 	-- window_background_opacity = 0.8,
-	color_scheme = 'Dark+',
-   window_close_confirmation="NeverPrompt",
-   initial_rows = 30,
-   initial_cols = 110,
- 
+	color_scheme = "Dark+",
+	window_close_confirmation = "NeverPrompt",
+	initial_rows = 30,
+	initial_cols = 110,
+
 	font_size = 12,
-  font = wezterm.font {
-    family = 'Cascadia Code',
-    harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1',  'zero=1', 'onum=1',
-'ss01=1', 'ss02=1', 'ss03=1', 'ss04=1', 'ss05=1', 'ss06=1'
- },
-  },
+	font = wezterm.font({
+		family = "Cascadia Code",
+		harfbuzz_features = {
+			"calt=1",
+			"clig=1",
+			"liga=1",
+			"zero=1",
+			"onum=1",
+			"ss01=1",
+			"ss02=1",
+			"ss03=1",
+			"ss04=1",
+			"ss05=1",
+			"ss06=1",
+		},
+	}),
 	window_padding = {
 		left = 10,
 		right = 10,
@@ -23,12 +33,12 @@ return {
 		bottom = 0,
 	},
 	keys = {
-    {key = '1', mods='ALT', action = act.ActivateTab(0)},
-    {key = '2', mods='ALT', action = act.ActivateTab(1)},
-    {key = '3', mods='ALT', action = act.ActivateTab(2)},
-    {key = '1', mods='CTRL', action = act.MoveTab(0)},
-    {key = '2', mods='CTRL', action = act.MoveTab(1)},
-    {key = '3', mods='CTRL', action = act.MoveTab(2)},
+		{ key = "1", mods = "ALT", action = act.ActivateTab(0) },
+		{ key = "2", mods = "ALT", action = act.ActivateTab(1) },
+		{ key = "3", mods = "ALT", action = act.ActivateTab(2) },
+		{ key = "1", mods = "CTRL", action = act.MoveTab(0) },
+		{ key = "2", mods = "CTRL", action = act.MoveTab(1) },
+		{ key = "3", mods = "CTRL", action = act.MoveTab(2) },
 		{ key = "H", mods = "CTRL|SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 5 } }) },
 		{ key = "J", mods = "CTRL|SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 5 } }) },
 		{ key = "K", mods = "CTRL|SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 5 } }) },
@@ -48,15 +58,3 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 	hide_tab_bar_if_only_one_tab = true,
 }
-
-
-
-
-
-
-
-
-
-
-
-
