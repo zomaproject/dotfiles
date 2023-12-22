@@ -185,6 +185,8 @@ map <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
 imap <C-i><Action>(ParameterInfo)
 nmap <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
 nmap <leader>rP <Action>(ManageRecentProjects)
+nmap <leader>aM <Action>(EfCore.Features.Migrations.AddMigrationAction)
+nmap <leader>uD <Action>(EfCore.Features.Database.UpdateDatabaseAction)
 "OPP
 map <leader>ge <Action>(Generate)
 nmap <leader>ff <Action>(FileStructurePopup)
