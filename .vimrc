@@ -172,6 +172,7 @@ vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
 map <C-\> <Action>(ActivateTerminalToolWindow)
 map <leader><S-c> <Action>(copilot.chat.show)
+map<leader><S-q>CloseAllEditorsButActive
 "Rider
 map <leader>rS <Action>(RiderNewSolution)
 nmap <leader>rr <Action>(Run)
@@ -187,6 +188,7 @@ nmap <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
 nmap <leader>rP <Action>(ManageRecentProjects)
 nmap <leader>aM <Action>(EfCore.Features.Migrations.AddMigrationAction)
 nmap <leader>uD <Action>(EfCore.Features.Database.UpdateDatabaseAction)
+nmap <leader>rM <Action>(EfCore.Features.Migrations.RemoveLastMigrationAction)
 "OPP
 map <leader>ge <Action>(Generate)
 nmap <leader>ff <Action>(FileStructurePopup)
