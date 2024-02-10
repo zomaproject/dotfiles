@@ -189,6 +189,12 @@ nmap <leader>rP <Action>(ManageRecentProjects)
 nmap <leader>aM <Action>(EfCore.Features.Migrations.AddMigrationAction)
 nmap <leader>uD <Action>(EfCore.Features.Database.UpdateDatabaseAction)
 nmap <leader>rM <Action>(EfCore.Features.Migrations.RemoveLastMigrationAction)
+nmap <leader>se <Action>(ActivateEndpointsToolWindow)
 "OPP
 map <leader>ge <Action>(Generate)
 nmap <leader>ff <Action>(FileStructurePopup)
+
+
+"Flutter
+
+map <leader>few <Action>(Flutter.ExtractWidget)
