@@ -104,7 +104,8 @@ map <leader>fc <action>(FindInPath)
 "map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
-map <leader>w <Action>(SaveAll)
+map <leader>w <Action>(SaveAll) <Action>(RiderDebuggerApplyEncChagnes)
+
 " Close active tab
 map <S-q> <action>(CloseContent)
 
@@ -154,6 +155,7 @@ vmap <A-Down> :m '>+1<CR>gv=gv
 map <leader>np <Action>(NewProject)
 map <leader><S-c> <Action>(copilot.chat.show)
 map <leader>rV <Action>(IdeaVim.ReloadVimRc.reload)
+vmap n <Action>(SelectNextOccurrence)
 
 " construir metodos getter and setter"
 map <leader>om <Action>(OverrideMethods)
