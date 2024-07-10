@@ -9,9 +9,9 @@ return {
 	initial_rows = 30,
 	initial_cols = 110,
 
-	font_size = 12,
+	font_size = 13,
 	font = wezterm.font({
-		family = "Cascadia Code",
+		family = "PlemolJP Console NF",
 		harfbuzz_features = {
 			"calt=1",
 			"clig=1",
