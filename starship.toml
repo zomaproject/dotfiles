@@ -1,5 +1,8 @@
 scan_timeout = 60
-add_newline = false
+add_newline = true
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 
 [line_break]
 disabled = true
@@ -46,3 +49,12 @@ format = "[$symbol($version )]($style)"
 [golang]
 format = "[$symbol($version )]($style)"
 symbol = " "
+# ~/.config/starship.toml
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold blue'
+symbol = '🅰 '
+[aws.region_aliases]
+ap-southeast-2 = 'au'
+us-east-1 = 'ue-1'

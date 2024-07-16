@@ -9,7 +9,7 @@ set showmode
 set showcmd
 set ai
 set si
-
+Plug 'https://github.com/tpope/vim-commentary'
 set ignorecase
 set smartcase
 set incsearch
@@ -66,10 +66,10 @@ imap <C-k> <Up>
 
 
 " Comment lines
-map <C-/> <action>(CommentByLineComment)
+"map <C-/> <action>(CommentByLineComment)
 " comentar por bloque
-vmap <C-/> <Action>(CommentByBlockComment)
-imap <C-/> <Action>(CommentByBlockComment)
+"vmap <leader>gc <Action>(CommentByBlockComment)
+"imap <C-/> <Action>(CommentByBlockComment)
 
 " Jump around with easymotion
 " map <leader>j <Plug>(easymotion-s)
@@ -183,7 +183,6 @@ nmap <leader>nt <Action>(RiderNuGetToggleToolWindowAction)
 map <leader>rw <Action>(RiderDebuggerApplyEncChagnes)
 map <leader>dba <Action>(EfCore.Groups.Dialogs)
 map <leader>rt <Action>(RiderUnitTestRunSolutionAction)
-map <leader>gc <Action>(Generate)
 map <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
 imap <C-i><Action>(ParameterInfo)
 nmap <leader>hr <Action>(RiderDebuggerApplyEncChagnes)
@@ -195,6 +194,8 @@ nmap <leader>se <Action>(ActivateEndpointsToolWindow)
 "OPP
 map <leader>ge <Action>(Generate)
 nmap <leader>ff <Action>(FileStructurePopup)
+map <leader>d <Action>(Debug)
+map <leader>/b <Action>(ToggleLineBreakpoint)
 
 
 "Flutter
