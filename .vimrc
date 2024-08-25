@@ -153,7 +153,7 @@ vmap <A-Down> :m '>+1<CR>gv=gv
 
 " --------------- IDE -----------------"
 map <leader>np <Action>(NewProject)
-map <leader><S-c> <Action>(copilot.chat.show)
+map <leader><S-c> <Action>(ActivateAIAssistantToolWindow)
 map <leader>rV <Action>(IdeaVim.ReloadVimRc.reload)
 vmap n <Action>(SelectNextOccurrence)
 
@@ -173,7 +173,6 @@ map <C-h> <Action>(ActivateProjectToolWindow)
 vmap n <Action>(SelectNextOccurrence)
 imap <C-h> <Action>(ActivateProjectToolWindow)
 map <C-\> <Action>(ActivateTerminalToolWindow)
-map <leader><S-c> <Action>(copilot.chat.show)
 map<leader><S-q>CloseAllEditorsButActive
 "Rider
 map <leader>rS <Action>(RiderNewSolution)

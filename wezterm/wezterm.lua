@@ -11,7 +11,7 @@ return {
 
 	font_size = 13,
 	font = wezterm.font({
-		family = "PlemolJP35 Console NF",
+		family = "CaskaydiaCove Nerd Font",
 		harfbuzz_features = {
 			"calt=1",
 			"clig=1",
