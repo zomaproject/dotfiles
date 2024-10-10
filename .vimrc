@@ -57,11 +57,11 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Execute macro saved in 'q' register
-nnoremap qj @q
+nnoremap aj @q
 " Popup navigation
 
-imap <C-j> <Down>
-imap <C-k> <Up>
+nmap <C-j> <Down>
+nmap <C-k> <Up>
 
 
 
@@ -175,7 +175,7 @@ imap <C-h> <Action>(ActivateProjectToolWindow)
 map <C-\> <Action>(ActivateTerminalToolWindow)
 map<leader><S-q>CloseAllEditorsButActive
 "Rider
-map <leader>rS <Action>(RiderNewSolution)
+map <leader>rs <Action>(RiderNewSolution)
 nmap <leader>rr <Action>(Run)
 map <leader>st <Action>(Stop)
 nmap <leader>nt <Action>(RiderNuGetToggleToolWindowAction)
