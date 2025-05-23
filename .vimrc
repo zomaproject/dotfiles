@@ -57,7 +57,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Execute macro saved in 'q' register
-nnoremap aj @q
+nnoremap qp @q
 " Popup navigation
 
 nmap <C-j> <Down>
@@ -89,7 +89,7 @@ map <leader>ru <Action>(Unsplit)
 map <leader>me <Action>(MoveEditorToOppositeTabGroup)
 
 " Display options
-map <leader>dd <action>(ToggleDistractionFreeMode)
+map <leader>dd <action>(Debug)
 map <leader>dz <action>(ToggleZenMode)
 map <leader>df <action>(ToggleFullScreen)
 
@@ -153,7 +153,7 @@ vmap <A-Down> :m '>+1<CR>gv=gv
 
 " --------------- IDE -----------------"
 map <leader>np <Action>(NewProject)
-map <leader><S-c> <Action>(ActivateAIAssistantToolWindow)
+map <leader><S-c> <Action>(copilot.chat.show)
 map <leader>rV <Action>(IdeaVim.ReloadVimRc.reload)
 vmap n <Action>(SelectNextOccurrence)
 
@@ -190,11 +190,16 @@ nmap <leader>aM <Action>(EfCore.Features.Migrations.AddMigrationAction)
 nmap <leader>uD <Action>(EfCore.Features.Database.UpdateDatabaseAction)
 nmap <leader>rM <Action>(EfCore.Features.Migrations.RemoveLastMigrationAction)
 nmap <leader>se <Action>(ActivateEndpointsToolWindow)
+
+"Flutter
+nmap <leader>ew <Action>(Flutter.ExtractWidget)
+
 "OPP
 map <leader>ge <Action>(Generate)
 nmap <leader>ff <Action>(FileStructurePopup)
 map <leader>d <Action>(Debug)
 map <leader>/b <Action>(ToggleLineBreakpoint)
+
 
 
 "Flutter
